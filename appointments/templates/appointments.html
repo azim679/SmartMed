@@ -192,6 +192,7 @@
 
         overlay.addEventListener('click', () => {
             appointmentModal.style.display = 'none';
+            rescheduleModal.style.display = 'none';
             overlay.style.display = 'none';
         });
 
@@ -208,16 +209,19 @@
                 const appointmentId = button.getAttribute('data-appointment-id');
                 appointmentIdInput.value = appointmentId;
                 rescheduleModal.style.display = 'block';
+                overlay.style.display = 'block';
             });
         });
 
         closeRescheduleModal.addEventListener('click', () => {
             rescheduleModal.style.display = 'none';
+            overlay.style.display = 'none';
         });
 
         window.addEventListener('click', (e) => {
             if (e.target === rescheduleModal) {
                 rescheduleModal.style.display = 'none';
+                overlay.style.display = 'none';
             }
         });
         if (messageContainer) {
