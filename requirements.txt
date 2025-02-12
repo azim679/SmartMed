@@ -3,3 +3,4 @@ Pillow
 django-widget-tweaks
 gunicorn
 whitenoise
+python-dotenv
